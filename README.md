@@ -1,7 +1,7 @@
 # IslamAI
 Islam AI for Microsoft Imagine Cup
 # How to run
-1.Install flask
+1.Install flask \n
 2.Run main.py
 # IN-DEVELOPMENT
 1.Query display
