@@ -1,3 +1,6 @@
 nlp/model/universal-sentence-encoder_4/
 nlp/.ipynb_checkpoints
 nlp/.ipynb_checkpoints/
+
+.env/
+
