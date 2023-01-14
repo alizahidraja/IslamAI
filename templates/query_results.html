@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Query</title>
-    </head>
-    <body>
-        <p>You Searched--></p><p>{{query}}</p>
-        <h1>Results</h1>
-        {{answer|safe}}
-    </body>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Query</title>
+    <style>
+        body {
+            display: flex;
+            background: #000;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="{{home_url}}">
+        <img src="back.jpg" height="60" style="transform: translate(-370%,0%);"/>
+    </a>
+    <h3 style="color: #03f453;">You Searched : "</h3>
+    <h3 style="color: #03f453;"><b>{{query}}</b></h3>
+    <h3 style="color: #03f453;">"</h3>
+    <p style="transform: translate(-200%,500%); color: aliceblue;">{{answer|safe}}</p>
+
+</body>
+
 </html>
