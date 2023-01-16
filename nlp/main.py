@@ -469,7 +469,9 @@ def SearchDocument(query, size=10):
         return find
 """
 path_to_home="main.html"
+path_to_result="query_results.html"
 
+@app.route("/")
 @app.route("/home", methods=["POST", "GET"])
 def home():
     if request.method == "POST":
@@ -478,7 +480,6 @@ def home():
     else:
         return render_template(path_to_home)
 
-path_to_result="query_results.html"
 @app.route("/search<Query>")
 def query_results(Query):
     out="this is tha ans"

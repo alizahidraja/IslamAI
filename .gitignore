@@ -5,3 +5,4 @@ nlp/.ipynb_checkpoints/
 .env/
 
 nlp/__pycache__
+nlp/__pycache__/
