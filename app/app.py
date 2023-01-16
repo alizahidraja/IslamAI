@@ -471,7 +471,7 @@ def SearchDocument(query, size=10):
 path_to_home="main.html"
 path_to_result="query_results.html"
 
-@app.route("/")
+@app.route("/", methods=["POST", "GET"])
 @app.route("/home", methods=["POST", "GET"])
 def home():
     if request.method == "POST":

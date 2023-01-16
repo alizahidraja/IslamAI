@@ -1,4 +1,4 @@
-from nlp.main import *
+from app.app import *
 
 
 if __name__=="__main__":

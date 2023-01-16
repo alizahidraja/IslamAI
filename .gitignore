@@ -1,8 +1,8 @@
-nlp/model/universal-sentence-encoder_4/
-nlp/.ipynb_checkpoints
-nlp/.ipynb_checkpoints/
+app/model/universal-sentence-encoder_4/
+app/.ipynb_checkpoints
+app/.ipynb_checkpoints/
 
 .env/
 
-nlp/__pycache__
-nlp/__pycache__/
+app/__pycache__
+app/__pycache__/
