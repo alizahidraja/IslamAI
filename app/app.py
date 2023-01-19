@@ -151,12 +151,33 @@ def home():
 def query_results(Query):
     print(Query)
     #print(SearchDocument(Query))
-    
-    out=[
+    name=[]
+    surah_num=[]
+    ayah_num=[]
+    arabic=[]
+    tafseer=[]
+    translation=[]
+    out_=[
         "The Cow | 2 | 15 | ٱللَّهُ يَسْتَهْزِئُ بِهِمْ وَيَمُدُّهُمْ فِي طُغْيَانِهِمْ يَعْمَهُونَ | Allah will throw back their mockery on them, and give them rope in their trespasses; so they will wander like blind ones (To and fro). | There is no commentary by Abul Maududi available for this verse",
      "The Cow | 2 | 15 | ٱللَّهُ يَسْتَهْزِئُ بِهِمْ وَيَمُدُّهُمْ فِي طُغْيَانِهِمْ يَعْمَهُونَ | Allah will throw back their mockery on them, and give them rope in their trespasses; so they will wander like blind ones (To and fro). | There is no commentary by Abul Maududi available for this verse",
      "The Cow | 2 | 15 | ٱللَّهُ يَسْتَهْزِئُ بِهِمْ وَيَمُدُّهُمْ فِي طُغْيَانِهِمْ يَعْمَهُونَ | Allah will throw back their mockery on them, and give them rope in their trespasses; so they will wander like blind ones (To and fro). | There is no commentary by Abul Maududi available for this verse",
      "The Cow | 2 | 15 | ٱللَّهُ يَسْتَهْزِئُ بِهِمْ وَيَمُدُّهُمْ فِي طُغْيَانِهِمْ يَعْمَهُونَ | Allah will throw back their mockery on them, and give them rope in their trespasses; so they will wander like blind ones (To and fro). | There is no commentary by Abul Maududi available for this verse",
      ]
+    for i in out_:
+        x=i.split("|")
+        name.append(x[0])
+        surah_num.append(x[1])
+        ayah_num.append(x[2])
+        arabic.append(x[3])
+        translation.append(x[4])
+        tafseer.append(x[5])
+    out_unstyle=pd.DataFrame({"Surah Name":name,
+                                "Surah Number":surah_num,
+                                "Ayah Number": ayah_num,
+                                "Arabic Translation":arabic,
+                                "English Translation":translation,
+                                "Tafseer":tafseer
+    })
+    outa=out_unstyle.style.set_properties(**{"color":"white","font-size":"17pt",'border': '3px solid white'})
+    out=outa.to_html()
     return render_template(path_to_result, query=Query , answer=out , home_url=url_for("home"))
-
